@@ -8,6 +8,7 @@ function reducer(state,action){
     {
     case "add": return {...state,playlist:[...state.playlist,action.payload]}
     case "remove": return {...state,playlist:state.playlist.filter(e => e.id !== action.payload)}
+    case "setAll": return {...state,playlist:action.payload}
     default: return state
     }
 
