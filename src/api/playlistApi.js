@@ -1,5 +1,5 @@
-export async function fetchPlaylist() {
-    const response = await fetch('https://itunes.apple.com/search?term=<song-or-artist>&media=music')
+export async function searchTracks(term) {
+    const response = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(term)}&media=music&entity=song`)
     const data = (await response).json()
-    return data
+    return data.results
 }
