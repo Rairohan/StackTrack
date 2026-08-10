@@ -1,12 +1,13 @@
-import react from 'react';
-import PlaylistProvider from '../context/PlaylistContext';
+import { Link } from 'react-router-dom';
+import SearchBar from './SearchBar';
 export default function NavBar(){
     return(
-        <div>
-            <h1>StackTrack</h1>
-            <ul>
-                <li>My Playlist</li>
-            </ul>
+        <div>          
+            <Link to="/">Home</Link>
+            <Link to="/playlist">
+                My Playlist
+            </Link>
+            <SearchBar/>
         </div>
     )
 }
