@@ -1,5 +1,10 @@
+import PlaylistList from "../components/PlaylistList";
 export default function Playlist() {
     return (
-        <h1>Playlist</h1>
+        <div>
+            <h1>My Playlist</h1>
+            <PlaylistList/>
+        </div>
+
     )
 }

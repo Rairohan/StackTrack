@@ -22,11 +22,11 @@ export default function usePlaylist() {
   }
 
   function addTrack(track) {
-    dispatch({ type: 'ADD_TRACK', payload: track })
+    dispatch({ type: 'add', payload: track })
   }
 
   function removeTrack(id) {
-    dispatch({ type: 'REMOVE_TRACK', payload: id })
+    dispatch({ type: 'remove', payload: id })
   }
 
   return {
