@@ -9,6 +9,7 @@ export default function SearchBar(){
         e.preventDefault()
         const data = await searchTracks(term)
         setResults(data)
+        setTerm("")
     }
     return(
         <div>
@@ -17,6 +18,8 @@ export default function SearchBar(){
                     type="text"
                     value={term}
                     onChange={(e)=>setTerm(e.target.value)}
+                    placeholder="Search for tracks..."
+
                 />   
             </form>
             <ul>
@@ -24,7 +27,12 @@ export default function SearchBar(){
                     results.map((track)=>(
                         <li key={track.trackId}>
                              {track.trackName} - {track.artistName}
-                             <button onClick={()=>addTrack(track)}> Add</button>
+                             <button onClick={()=>{
+                                addTrack(track) 
+                                setResults([])}}
+                             > 
+                             Add
+                             </button>
                         </li>
                     ))
                 }

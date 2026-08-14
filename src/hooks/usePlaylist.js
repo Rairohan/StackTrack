@@ -22,7 +22,13 @@ export default function usePlaylist() {
   }
 
   function addTrack(track) {
+    const alreadyExist = state.playlist.some(t => t.trackId === t.trackId)
+    if (alreadyExist) {
+      alert("Track already exists in the playlist")
+      return false
+    }
     dispatch({ type: 'add', payload: track })
+    return true
   }
 
   function removeTrack(id) {
