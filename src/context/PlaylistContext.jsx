@@ -15,8 +15,9 @@ function reducer(state,action){
       else
       return{...state,playlist:[...state.playlist,action.payload]}
     }
-    case "remove": return {...state,playlist:state.playlist.filter(e => e.id !== action.payload)}
+    case "remove": return {...state,playlist:state.playlist.filter(e => e.trackId !== action.payload)}
     case "setAll": return {...state,playlist:action.payload}
+    case "clear" : return {...state,playlist:[]}
     default: return state
     }
 
