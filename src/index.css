@@ -4,6 +4,14 @@
 @theme{
   --font-sans: 'Poppins', sans-serif;
 }
+body{
+  min-height: 100vh;
+  background-image: url('/img/home1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 /* :root {
   --text: #6b6375;
   --text-h: #08060d;
