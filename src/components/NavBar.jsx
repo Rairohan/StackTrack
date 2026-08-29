@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import SearchBar from './SearchBar';
 export default function NavBar(){
     return(
-        <div className='bg-gray-800 text-white flex flex-col items-center p-7 '>
+        <div className='bg-gray-800 text-white flex flex-col items-center p-7 position-sticky top-0 z-50'>
             <div className='flex gap-10'>
                 <Link to="/" className='text-4xl hover:text-green-700 '>Home</Link>
                 <Link to="/playlist" className='text-4xl hover:text-green-700 '> My Playlist</Link>
